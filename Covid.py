@@ -10,6 +10,7 @@ from datetime import date
 from matplotlib import pyplot as plt
 import numpy as np
 
+# Checks whether file1 is present or not
 def file1IsPresent():
     try:
         now=str(date.today())
@@ -26,6 +27,7 @@ def file1IsPresent():
     except:
         return False
 
+# Checks whether file2 is present or not
 def file2IsPresent():
     try:
         now=str(date.today())
@@ -42,6 +44,7 @@ def file2IsPresent():
     except:
         return False
 
+# returns JSON object received from URL
 def getjson(url):
 
     if url=='https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true':
@@ -77,6 +80,7 @@ def getjson(url):
                 js = None
             return js
 
+# formats string by adding spaces
 def pf(string,n):
     s=str(string)
     return s.ljust(n)
